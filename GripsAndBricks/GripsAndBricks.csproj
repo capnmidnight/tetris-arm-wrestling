@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AAB20FE-4238-4C5B-BCBD-DE719F74DB38}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GripsAndBricks</RootNamespace>
+    <AssemblyName>GripsAndBricks</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>.\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SlimDX, Version=4.0.11.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=AMD64" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.html">
+      <SubType>Form</SubType>
+    </Content>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\GameScreen.cs" />
+    <Compile Include="Screens\MenuScreen.cs" />
+    <Compile Include="Screens\OptionsScreen.cs" />
+    <Compile Include="Screens\TitleScreen.cs" />
+    <Compile Include="GameStates.cs" />
+    <Compile Include="WinFormsTetris.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="music\game1.ogg" />
+    <None Include="music\game2.ogg" />
+    <None Include="music\menu.ogg" />
+    <None Include="music\player1win.ogg" />
+    <None Include="music\player2win.ogg" />
+    <None Include="music\title.ogg" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Puzzle\Puzzle\PuzzleFramework.csproj">
+      <Project>{5BB978AD-F064-41F8-8A2F-B079300AAE8F}</Project>
+      <Name>PuzzleFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Puzzle\Tetris\Puzzles.csproj">
+      <Project>{A54C79FD-B4A3-4D74-A45A-FDE0581CCB2C}</Project>
+      <Name>Puzzles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinGameLib\WinGameLib.csproj">
+      <Project>{FF62A365-A72E-4F34-A840-6E5A62772CF9}</Project>
+      <Name>WinGameLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\bg.png" />
+    <Content Include="img\cursor.png" />
+    <Content Include="img\gameover.png" />
+    <Content Include="img\menu1.png" />
+    <Content Include="img\menu2.png" />
+    <Content Include="img\menu3.png" />
+    <Content Include="img\menu4.png" />
+    <Content Include="img\options.png" />
+    <Content Include="img\opt\0.png" />
+    <Content Include="img\opt\1.png" />
+    <Content Include="img\opt\2.png" />
+    <Content Include="img\opt\3.png" />
+    <Content Include="img\opt\4.png" />
+    <Content Include="img\opt\5.png" />
+    <Content Include="img\opt\6.png" />
+    <Content Include="img\opt\7.png" />
+    <Content Include="img\opt\8.png" />
+    <Content Include="img\opt\9.png" />
+    <Content Include="img\opt\a.png" />
+    <Content Include="img\opt\b.png" />
+    <Content Include="img\opt\c.png" />
+    <Content Include="img\opt\d.png" />
+    <Content Include="img\opt\down.png" />
+    <Content Include="img\opt\e.png" />
+    <Content Include="img\opt\enter.png" />
+    <Content Include="img\opt\escape.png" />
+    <Content Include="img\opt\f.png" />
+    <Content Include="img\opt\g.png" />
+    <Content Include="img\opt\h.png" />
+    <Content Include="img\opt\i.png" />
+    <Content Include="img\opt\j.png" />
+    <Content Include="img\opt\k.png" />
+    <Content Include="img\opt\l.png" />
+    <Content Include="img\opt\left.png" />
+    <Content Include="img\opt\m.png" />
+    <Content Include="img\opt\n.png" />
+    <Content Include="img\opt\o.png" />
+    <Content Include="img\opt\off.png" />
+    <Content Include="img\opt\on.png" />
+    <Content Include="img\opt\p.png" />
+    <Content Include="img\opt\q.png" />
+    <Content Include="img\opt\r.png" />
+    <Content Include="img\opt\right.png" />
+    <Content Include="img\opt\s.png" />
+    <Content Include="img\opt\space.png" />
+    <Content Include="img\opt\t.png" />
+    <Content Include="img\opt\u.png" />
+    <Content Include="img\opt\up.png" />
+    <Content Include="img\opt\v.png" />
+    <Content Include="img\opt\w.png" />
+    <Content Include="img\opt\x.png" />
+    <Content Include="img\opt\y.png" />
+    <Content Include="img\opt\z.png" />
+    <Content Include="img\playbg1.png" />
+    <Content Include="img\playbg2.png" />
+    <Content Include="img\playbg3.png" />
+    <Content Include="img\sbg.png" />
+    <Content Include="img\tiles.png" />
+    <Content Include="img\title.png" />
+    <Content Include="snd\clear1.wav" />
+    <Content Include="snd\clear2.wav" />
+    <Content Include="snd\clear3.wav" />
+    <Content Include="snd\clear4.wav" />
+    <Content Include="snd\drop.wav" />
+    <Content Include="snd\flip.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
